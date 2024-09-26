@@ -1,0 +1,78 @@
+@import "../../app.scss";
+.hero{
+    height: calc(100vh - 100px);
+    background: linear-gradient(180deg, #0c0c1d,#111132);
+    position: relative;
+    overflow: hidden;
+    .Wrapper{
+        max-width: 80%;
+        margin: auto;
+        height: 100%;
+        .textContainer{
+            height: 100%;
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-direction: column;
+            @include mobile{
+                height: 50%;
+                width: 100%;
+                gap: 20px;
+                align-items: center;
+                text-align: center;
+            }
+            h2{
+                font-size: 30px;
+                color: rebeccapurple;
+                letter-spacing: 10px;
+            }
+            h1{
+                font-size: 88px;
+                @include mobile{
+                    font-size: 36px;
+                }
+            }
+            .buttons{
+                button{
+                    padding: 15px;
+                    border: 1px solid white;
+                    border-radius: 10px;
+                    background-color: transparent;
+                    margin-right: 15px;
+                    color: white;
+                    @include mobile{
+                       padding: 8px;
+                       margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+    .imageContainer{
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        @include mobile{
+            height: 50%;
+            width: 100%;
+            top: unset;
+            bottom: 0;
+        }
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+    .slideText{
+        position: absolute;
+        font-size: 50vh;
+        bottom: -120px;
+        white-space: nowrap;
+        width: 100%;
+        font-weight: bold;
+        color: #ffffff09;
+    }
+}
